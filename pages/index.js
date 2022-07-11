@@ -40,17 +40,28 @@ export default function Home() {
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+  return (
+    <div>
+      <Head>
+        <title>Whitelist Dapp</title>
+        <meta name="description" content="Whitelist-Dapp" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className={styles.main}>
+        <div>
+          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+          <div className={styles.description}>
+            Its an NFT collection for developers in Crypto.
+          </div>
+          <div className={styles.description}>
+            {numberOfWhitelisted} have already joined the Whitelist
+          </div>
+          {renderButton()}
         </div>
-      </main>
+        <div>
+          <img className={styles.image} src="./crypto-devs.svg" />
+        </div>
+      </div>
 
       <footer className={styles.footer}>
         <a
