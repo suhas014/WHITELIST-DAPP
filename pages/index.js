@@ -37,9 +37,9 @@ export default function Home() {
 
     // If user is not connected to the Rinkeby network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 80001) {
+      window.alert("Change the network to Polygon Mumbai");
+      throw new Error("Change network to Polygon Mumbai");
     }
 
     if (needSigner) {
@@ -181,7 +181,7 @@ export default function Home() {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
+        network: "polygon",
         providerOptions: {},
         disableInjectedProvider: false,
       });
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
         <div className={styles.requirements}>
           <h1>NEW HERE?</h1>
-          <>1. INSTALL METAMASK <br></br> 2. GET SOME TEST RINKEBY ETH FOR GAS <br></br>3. WHITELIST <br></br><br></br>
+          <>1. INSTALL METAMASK <br></br> 2. GET SOME TEST MATIC FOR GAS <br></br>3. WHITELIST <br></br><br></br>
           </>
           <a href="https://mint-nft-shs.vercel.app" className={styles.button2}>MINT NFT</a>
 
